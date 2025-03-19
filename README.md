@@ -18,3 +18,21 @@
 实现 2007 年 ToG 论文 [Seam Carving for Content-Aware Image Resizing](https://dl.acm.org/doi/10.1145/1276377.1276390) 中的接缝裁剪算法，用以改变图像的长宽比例。
 
 具体实验文档请见 [作业1文档](./hw_1/README.md)
+
+## 其他资源
+
+`MATLAB` 相关资源：
+- [MATLAB 官方文档](https://ww2.mathworks.cn/help/matlab/index.html?s_tid=hc_panel)
+- [MATLAB 教程](https://www.cainiaojc.com/matlab/matlab-tutorial.html)
+
+`CPP` 相关资源：
+- [CPP Reference](https://en.cppreference.com/w/)
+- [CPP 教程](https://www.runoob.com/cplusplus/cpp-tutorial.html)
+
+`Python` 相关资源：
+- [Python 入门](https://github.com/walter201230/Python)
+- [OpenCV-Python Docs](https://codec.wang/docs/opencv)
+
+数学建模相关资源：
+- [全国大学生数学建模竞赛](https://www.mcm.edu.cn/) （注：含有往届赛事的赛题和优秀解答，可供参考）
+- [美国大学生数学建模竞赛](https://www.comap.com/contests/mcm-icm)
