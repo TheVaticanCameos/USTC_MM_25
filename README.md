@@ -19,17 +19,17 @@
 
 实现 2007 年 ToG 论文 [Seam Carving for Content-Aware Image Resizing](https://dl.acm.org/doi/10.1145/1276377.1276390) 中的接缝裁剪算法，用以改变图像的长宽比例。
 
-具体实验文档请见 [作业1文档](./hw_1/README.md)
+具体实验文档请见 [作业 1 文档](./hw_1/README.md)
 
 ### 作业2：基于矩阵分解的图像处理
 
-以下任务2选1：  
+以下任务 2 选 1：  
 
-1. 实现基于矩阵SVD分解的图像压缩
+1. 实现基于矩阵 SVD 分解的图像压缩
 
 2. 实现基于矩阵低秩分解的图像修复
 
-具体实验文档请见 [作业2文档](./hw_2/README.md)
+具体实验文档请见 [作业 2 文档](./hw_2/README.md)
 
 ### 作业3：数据拟合模型
 
@@ -37,7 +37,16 @@
 1. 平面点列的曲线拟合
 2. 使用神经网络进行昆虫分类
 
-具体实验文档请见 [作业3文档](./hw_3/README.md)
+具体实验文档请见 [作业 3 文档](./hw_3/README.md)
+
+### 作业3：微分方程模型
+
+以下任务 3 选 1：
+1. 人口模型
+2. 传染病模型
+3. Poisson 图像融合
+
+具体实验文档请见 [作业 4 文档](./hw_4/README.md)
 
 ## 其他资源
 
@@ -52,6 +61,13 @@
 `Python` 相关资源：
 - [Python 入门](https://github.com/walter201230/Python)
 - [OpenCV-Python Docs](https://codec.wang/docs/opencv)
+
+`Mathematica` 相关资源：
+- [Mathematica 官网](https://www.wolfram.com/mathematica/)
+- [WolframAlpha 在线计算平台](https://www.wolframalpha.com/)
+
+`国产科学计算软件 北太天元` 相关资源：
+- [下载链接](https://www.baltamatica.com/download.html)
 
 数学建模相关资源：
 - [全国大学生数学建模竞赛](https://www.mcm.edu.cn/) （注：含有往届赛事的赛题和优秀解答，可供参考）
