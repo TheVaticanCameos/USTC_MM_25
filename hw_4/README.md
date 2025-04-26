@@ -21,39 +21,39 @@
 
 设时刻 $t$ 的人口数为 $N(t)$ ，初始时刻 $t_0$ 的人口数为 $N_0$ ，马尔萨斯认为 $N(t)$ 满足方程
 
-\[
+$$
 \left\{
 \begin{aligned}
 \frac{dN}{dt}&=rN \\
 N(t_0)&=N_0 \\
 \end{aligned}    
 \right.
-\]
+$$
 
 容易解出 
 
-\[ 
+$$ 
 N(t)=N_0 e^{r\left(t-t_0\right)}
-\]
+$$
 
 观察上述模型，不难发现：根据马尔萨斯的预测，人口竟然是呈指数级增长的！这显然不符合常识：人口不可能无限制地增长。因此需要在马尔萨斯模型中考虑人口增长的限制，这就得到了如下的 **自限模型** （也称 **Logistic 阻滞增长模型** ） 。
 
 假设一定的环境下资源所能供养的最多人数为 $K$ （称为极限人口或环境容纳量）。设人口较少时其自然增长率为 $r$ ，则当前人口数为 $N$ 时，将人口增长率取为 $r\left(1-\frac{N}{K}\right)$ 是一个相对合理的选择。在此假设下，人口总数满足
 
-\[
+$$
 \left\{
 \begin{aligned}
 \frac{dN}{dt}&=r\left(1-\frac{N}{K}\right)N \\
 N(t_0)&=N_0 \\
 \end{aligned}
 \right.
-\]
+$$
 
 解得
 
-\[
+$$
 N(t)=\frac{K}{1+\left(\frac{K}{N_0}-1\right)e^{-r\left(t-t_0\right)}}
-\]
+$$
 
 不难发现，根据自限模型，随着时间的增加，人口总数趋于极限人口 $K$ ；当人口数达到 $K/2$ 时，人口增速最快；根据此模型预测出的人口随时间的变化为一条 S 形曲线。
 
@@ -75,14 +75,14 @@ NO！
 
 马尔萨斯模型以及其衍生的自限模型的基本方程都是人口总数 $N(t)$ 关于时间 $t$ 的常微分方程
 
-\[
+$$
 \left\{
 \begin{aligned}
 \frac{dN(t)}{dt}&=rN \\
 N(t_0)&=N_0 \\
 \end{aligned}
 \right.
-\]
+$$
 
 这里对人口自然增长率 $r$ 的不同理解对应着不同的人口模型：认为 $r$ 是常数，即得到马尔萨斯模型；认为 $r=N\left(1-\frac{K}{N}\right)$ 即得到自限模型。事实上，通过对人口增长的不同建模，从而得到不同的 $r$ 的表现形式，都可以得到相应的人口模型。
 
@@ -94,9 +94,9 @@ N(t_0)&=N_0 \\
 
 我们用离散型随机变量 $X(t)$ 来表示 $t$ 时刻的人口数，即 $X(t)$ 只取自然数。我们记 $p_n(t)$ 为 $t$ 时刻人口数为非负整数 $n$ 的概率，即
 
-\[
+$$
 p_n(t)=P(X(t)=n),\quad n=0, 1, 2, \dots
-\]
+$$
 
 求解出 $p_n$ 后，即可使用 $X(t)$ 的统计信息（如均值、方差、高阶矩 etc）来刻画人口的变化。
 
@@ -108,18 +108,18 @@ p_n(t)=P(X(t)=n),\quad n=0, 1, 2, \dots
 
 为了简化模型，下面我们先考虑仅有出生的情形。由于随机事件 $\left\{X(t+\Delta t)=n \right\}$ 可以拆分成两个不相容的随机事件之和，即{ $\Delta t$ 时间内出生 1 人 | $X(t)=n-1$ } 和 { $\Delta t$ 时间内无人出生 | $X(t)=n$ }。从而
 
-\[
+$$
 \begin{aligned}
 p_n(t+\Delta t)&=P(X(t+\Delta t)=n) \\
 &=b_{n-1}\Delta \cdot p_{n-1}(t)+(1-b_n\Delta t)p_n(t)+o(\Delta t) \\
 \end{aligned}
-\]
+$$
 
 从而得到微分方程 
 
-\[
+$$
 \frac{dp_n(t)}{dt}+b_np_n(t)=b_{n-1}p_{n-1}(t)
-\]
+$$
 
 结合边界条件 $p_{N_0}\left(0\right)=1,\quad p_i(0)=0\ (i\ne N_0)$ 即可得到 $p_n(t)$ 的表达式，其中 $N_0$ 为初始时刻的人口数。
 
@@ -127,14 +127,14 @@ p_n(t+\Delta t)&=P(X(t+\Delta t)=n) \\
 
 和纯生模型类似，我们考虑只有死亡没有出生的情形。可以类似地得到方程
 
-\[
+$$
 \left\{
 \begin{aligned}
 &\frac{dp_n(t)}{dt}+d_np_n(t)=d_{n+1}p_{n+1}(t) \\
 &p_{N_0}(0)=1,\quad p_i(0)=0\ (i\ne N_0) \\
 \end{aligned}
 \right.
-\]
+$$
 
 #### 生灭过程模型
 
@@ -144,9 +144,9 @@ p_n(t+\Delta t)&=P(X(t+\Delta t)=n) \\
 
 从而 
 
-\[
+$$
 p_n(t+\Delta t)=b_{n-1}\Delta t p_{n-1}(t)+(1-b_n\Delta t-d_n \Delta t)p_n(t)+d_{n+1}\Delta t p_{n+1}(t)+o(\Delta t)
-\]
+$$
 
 以及初始条件 $p_{N_0}(0)=1,\quad p_i(0)=0\quad (i\ne N_0)$。
 
@@ -156,32 +156,32 @@ p_n(t+\Delta t)=b_{n-1}\Delta t p_{n-1}(t)+(1-b_n\Delta t-d_n \Delta t)p_n(t)+d_
 
 事实上，和马尔萨斯模型类似，我们仍然需要对系统中的一些未知参数引入先验。一种常用的做法是设 $b_n=bn, d_n=dn$ ，此时生灭过程模型为
 
-\[
+$$
 \left\{
 \begin{aligned}
 &\frac{dp_n}{dt}(t)=b(n-1)p_{n-1}(t)+d(n+1)p_{n+1}-(b+d)np_n(t) \\
 &p_{N_0}(0)=1,\quad p_i(0)=0\quad (i\ne N_0) \\
 \end{aligned}
 \right.
-\]
+$$
 
 虽然此方程难以求解，但我们可以跳过 $p_n$ 的求解，而是直接求解 $X(t)$ 的数学期望和方差。
 
-\[
+$$
 E(t):=E(X(t))=\sum_{n=1}^\infty np_n(t)    
-\]
+$$
 
 对时间求导并代入上述方程可得
 
-\[
+$$
 \frac{dE}{dt}=b\sum_{n=1}^\infty n(n-1)p_{n-1}(t)+d\sum_{n=1}^\infty n(n+1)p_{n+1}(t)-(b+d)\sum_{n=1}^\infty n^2 p_n(t)
-\]
+$$
 
 化简得
 
-\[
+$$
 \frac{dE}{dt}=(b-d)\sum_{n=1}^\infty np_n(t)=(b-d)E(t)
-\]
+$$
 
 结合 $E(0)=N_0$ ，可解得 $E(t)=N_0e^{\left(b-d\right)t}=N_0 e^{rt}$。
 
@@ -189,9 +189,9 @@ E(t):=E(X(t))=\sum_{n=1}^\infty np_n(t)
 
 与期望的计算方式类似，我们可以得到方差
 
-\[
+$$
 \sigma^2=\sum_{n=1}^\infty n^2 p_n(t)-E^2(t)=N_0\frac{b+d}{b-d}e^{\left(b-d\right)t}\cdot\left(e^{\left(b-d\right)t}-1\right)
-\]
+$$
 
 > 和马尔萨斯模型类似，这里也需要使用历史数据来拟合出模型中的未知参数 $b, d$ 。
 > 此外，可以想象， $b_n, d_n$ 的选取方式并不只有这一种。我们欢迎大家在实验中提出自己的假设，并导出其对应的 $b_n, d_n$ 表达式进行建模。
