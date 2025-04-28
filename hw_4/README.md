@@ -216,16 +216,18 @@ SIR模型将总人口分为三个状态：
 - **R (Recovered)**：移除者，已经康复或死亡的人群，不再具有传染性。
 
 模型假设总人口数固定（无出生、死亡或迁移），传播过程由以下微分方程描述：
+
 $$
 \frac{dS}{dt} = -\beta SI, \quad \frac{dI}{dt} = \beta SI - \gamma I, \quad \frac{dR}{dt} = \gamma I
 $$
-其中，$\beta$ 是传染率，$\gamma$ 是恢复率。
+
+其中， $\beta$ 是传染率， $\gamma$ 是恢复率。
 
 #### 如何求解
 
 使用数值方法（如Euler法、RK4龙格-库塔法）对微分方程组进行求解。常见流程为：
-1. 给定初始条件 $S(0), I(0), R(0)$。
-2. 选择步长 $dt$，迭代计算 $S(t), I(t), R(t)$。
+1. 给定初始条件 $S(0), I(0), R(0)$ 。
+2. 选择步长 $dt$，迭代计算 $S(t), I(t), R(t)$ 。
 3. 根据数值解绘制感染人数随时间变化的曲线。
 
 ### SEIR模型
@@ -236,10 +238,12 @@ SEIR模型在SIR基础上增加了一个潜伏期阶段E（Exposed）：
 - **E (Exposed)**：已感染但尚未具有传染性的人群。
 
 微分方程组为：
+
 $$
 \frac{dS}{dt} = -\beta SI, \quad \frac{dE}{dt} = \beta SI - \sigma E, \quad \frac{dI}{dt} = \sigma E - \gamma I, \quad \frac{dR}{dt} = \gamma I
 $$
-其中，$\sigma$ 是潜伏期转为感染期的速率。
+
+其中， $\sigma$ 是潜伏期转为感染期的速率。
 
 #### 如何求解
 
@@ -254,10 +258,12 @@ SIS模型假设感染者康复后不会获得免疫，而是重新回到易感�
 - **I (Infectious)**：感染者。
 
 微分方程组为：
+
 $$
 \frac{dS}{dt} = -\beta SI + \gamma I, \quad \frac{dI}{dt} = \beta SI - \gamma I
 $$
-其中，$\gamma$ 仍表示恢复率。
+
+其中， $\gamma$ 仍表示恢复率。
 
 #### 如何求解
 
