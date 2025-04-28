@@ -207,7 +207,7 @@ $$
 
 ## 选项3：Poisson 图像融合
 
-实际上，这是计算机图形学课程的第三个作业，相关的算法原理可以参考文档：[计算机图形学课程文档](https://github.com/USTC-CG/USTC_CG_25/tree/main/Homeworks/3_poisson_image_editing)，本课程为该算法提供了一个Matlab框架，可参考[population.xlsx](./data/population.xlsx)
+实际上，这是计算机图形学课程的第三个作业，相关的算法原理可以参考文档：[计算机图形学课程文档](https://github.com/USTC-CG/USTC_CG_25/tree/main/Homeworks/3_poisson_image_editing)，本课程为该算法提供了一个Matlab框架，可参考[Matlab框架](./poissonediting)
 
 ### 实验要求
 
