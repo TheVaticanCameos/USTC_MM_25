@@ -207,3 +207,17 @@ $$
 
 ## 选项3：Poisson 图像融合
 
+实际上，这是计算机图形学课程的第三个作业，相关的算法原理可以参考文档：[计算机图形学课程文档](https://github.com/USTC-CG/USTC_CG_25/tree/main/Homeworks/3_poisson_image_editing)，本课程为该算法提供了一个Matlab框架，可参考[population.xlsx](./data/population.xlsx)
+
+### 实验要求
+
+选项 3 的基本要求如下：
+- 完成文中的 Seamless cloning 的 Importing gradients 部分，务必写清楚该算法的原理，首先需要从偏微分方程开始分析，再到稀疏矩阵方程的构造；
+- 实时拖动区域显示结果，需要录制视频；
+- 请采用多个测试样例（大于等于4个）来直观说明算法的合理性。
+
+注：
+- 不选项不限制编程语言，可以利用框架[Matlab框架](./poissonediting)，也可以利用IMGUI等工具搭建C++框架，但是务必录制实时融合的视频。
+- 由于Matlab框架可以实现不规则区域的融合，因此如果使用C++框架但没有实现该结果，会扣除很多分数。
+
+可能的加分项：对梯度进行一些修正，比如使用Mixing gradients方法，并与现在的结果进行比较。
